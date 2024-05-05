@@ -1,0 +1,6 @@
+id_do_not_translate_this,original_text,translation
+timid.desc,"In combat, this officer will attempt to avoid direct engagements if at all possible, even if commanding a combat vessel.",
+cautious.desc,"In combat, this officer will prefer to stay out of enemy range, only occasionally moving in if out-ranged by the enemy.",
+steady.desc,"In combat, this officer will favor a balanced approach with tactics matching the current situation.",
+aggressive.desc,"In combat, this officer will prefer to engage at a range that allows the use of all of their ship's weapons, will pilot civilian ships as if they were combat ships, and will employ any fighters under their command aggressively.",
+reckless.desc,"In combat, this officer is aggressive to a fault, often disregarding the safety of their ship entirely in an effort to engage the enemy.",

@@ -1,0 +1,132 @@
+{
+	"translatable_files": {
+		"csv": [
+			{
+				"file": "campaign/abilities.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "desc"]
+			},
+			{
+				"file": "campaign/commodities.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "desc"]
+			},
+			{
+				"file": "campaign/industries.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "desc"]
+			},
+			{
+				"file": "campaign/market_conditions.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "desc"]
+			},
+			{
+				"file": "campaign/reports.csv",
+				"key_columns": ["event_type", "event_stage", "channels", "target_rel"],
+				"translatable_fields": ["subject", "summary", "assessment"]
+			},
+			{
+				"file": "campaign/rules.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["text"]
+			},
+			{
+				"file": "campaign/special_items.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "desc"]
+			},
+			{
+				"file": "campaign/submarkets.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "desc"]
+			},
+			{
+				"file": "characters/skills/aptitude_data.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "description"]
+			},
+			{
+				"file": "characters/skills/skill_data.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "description"]
+			},
+			{
+				"file": "characters/personalities.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["desc"]
+			},
+			{
+				"file": "hullmods/hull_mods.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "desc", "sModDesc"]
+			},
+			{
+				"file": "shipsystems/ship_systems.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name"]
+			},
+			{
+				"file": "strings/descriptions.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["text1"]
+			},
+			{
+				"file": "weapons/weapon_data.csv",
+				"key_columns": ["id"],
+				"translatable_fields": ["name", "primaryRoleStr"]
+			}
+		],
+		
+		"json": [
+			{
+				"file": "config/tag_data.json",
+				"translatable_fields": ["*.name"]
+			},
+			{
+				"file": "strings/strings.json",
+				"translatable_fields": ["*.*"]
+			},
+			{
+				"file": "strings/tips.json",
+				"translatable_fields": ["tips"]
+			},
+			{
+				"file": "strings/tooltips.json",
+				"translatable_fields": [
+					"codex.*.title", "codex.*.body",
+					"warroom.*.title", "warroom.*.body",
+					"fleetScreen.*.title", "fleetScreen.*.body",
+					"logistics.*", "misc.*"
+				]
+			},
+			{
+				"file": "world/factions/default_fleet_type_names.json",
+				"translatable_fields": ["*"]
+			},
+			{
+				"file": "world/factions/default_ranks.json",
+				"translatable_fields": ["*.*.name"]
+			}
+		],
+		
+		"txt": [
+			"missions/afistfulofcredits/mission_text.txt",
+			"missions/ambush/mission_text.txt",
+			"missions/coralnebula/mission_text.txt",
+			"missions/direstraits/mission_text.txt",
+			"missions/forlornhope/mission_text.txt",
+			"missions/forthegreaterlud/mission_text.txt",
+			"missions/hornetsnet/mission_text.txt",
+			"missions/m2/mission_text.txt",
+			"missions/m3/mission_text.txt",
+			"missions/nothingpersonal/mission_text.txt",
+			"missions/predatororprey/mission_text.txt",
+			"missions/randombattle1/mission_text.txt",
+			"missions/sinkingthebismarck/mission_text.txt",
+			"missions/thelasthurrah/mission_text.txt",
+			"missions/thewolfpack/mission_text.txt",
+			"missions/turningthetables/mission_text.txt"
+		]
+	}
+}
