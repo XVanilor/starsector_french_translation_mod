@@ -15,7 +15,6 @@ Black market transactions may catch the eye of authorities, resulting in cargo s
 Engaging in legitimate trade as a ""cover"" also reduces the probability of attracting the attention of authorities.",
 storage.name,Storage,
 storage.desc,Storage space for ships and cargo.,
-generic_military.name,,
 generic_military.desc,"Trade with $theFaction military base.
 
 Weapons and other military hardware can be bought and sold here even if they're illegal on the open market. A commission and better standing with $theFaction results in higher-grade hardware being available.
@@ -25,4 +24,3 @@ Will buy locally illegal goods as part of a no-questions-asked buyback program.
 Selling enough of a commodity will temporarily resolve a shortage.",
 local_resources.name,"Resource
 Stockpiles",
-local_resources.desc,,

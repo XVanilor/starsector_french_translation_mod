@@ -6,10 +6,8 @@ adaptive_coils.name,Adaptive Phase Coils,
 adaptive_coils.desc,"Phase coils are less able to maintain a connection with normal space as the ship's hard flux levels rise, resulting in a greatly reduced top speed as the coils struggle to gain traction.
 
 This modification allows the coils to handle higher levels of hard flux, increasing the threshold at which speed bottoms out by %s. For standard-design coils with no other modifications, this takes the threshold from %s to %s.",
-adaptive_coils.sModDesc,,
 advancedoptics.name,Advanced Optics,
 advancedoptics.desc,"Extends the range of beam weapons by %s, but reduces their turn rate by %s. Cumulative with Integrated Targeting Unit.",
-advancedoptics.sModDesc,,
 turretgyros.name,Advanced Turret Gyros,
 turretgyros.desc,Increases the turn rate of all turrets by %s.,
 turretgyros.sModDesc,Increases damage to missiles and fighters by %s. Increases damage to smaller ships by %s per size class of difference.,
@@ -20,16 +18,13 @@ assault_package.name,Assault Package,
 assault_package.desc,"Increases the ship's hull integrity by %s, armor by %s, and flux capacity by %s.
 
 Will try to engage enemies and otherwise act as a combat ship in battle.",
-assault_package.sModDesc,,
 autorepair.name,Automated Repair Unit,
 autorepair.desc,Reduces the time required to repair disabled weapons and engines (in combat) by %s.,
 autorepair.sModDesc,"Reduces repair time to %s, and reduces overload duration by %s.",
 auxiliarythrusters.name,Auxiliary Thrusters,
 auxiliarythrusters.desc,Increases the ship's maneuverability by %s.,
-auxiliarythrusters.sModDesc,,
 ballistic_rangefinder.name,Ballistic Rangefinder,
 ballistic_rangefinder.desc,<tooltip created in the script due to lots of highlighting>,
-ballistic_rangefinder.sModDesc,,
 blast_doors.name,Blast Doors,
 blast_doors.desc,"Installs additional hermetic and heavily reinforced doors at critical junctures throughout the ship. Increases hull integrity by %s.
 
@@ -62,17 +57,14 @@ Also reduces the weapon range reduction due to superior enemy Electronic Warfare
 eccm.sModDesc,Fully negates the effect of ECM and flares on missiles fired by this ship.,
 ecm.name,ECM Package,
 ecm.desc,"When deployed in combat, grants %s/%s/%s/%s ECM rating, depending on this ship's hull size.",
-ecm.sModDesc,,
 escort_package.name,Escort Package,
 escort_package.desc,"Increases the ship's maneuverability by %s. Increases the range of all point-defense weapons by %s, and increases the damage dealt to fighters and missiles by %s.
 
 Will try to engage enemies and otherwise act as a combat ship in battle.",
-escort_package.sModDesc,,
 expanded_deck_crew.name,Expanded Deck Crew,
 expanded_deck_crew.desc,"Reduces the rate at which the fighter replacement rate decreases due to fighter losses by %s, and increases the rate at which it recovers by %s.
 
 Increases the crew required by %s per fighter bay.",
-expanded_deck_crew.sModDesc,,
 magazines.name,Expanded Magazines,
 magazines.desc,Increases the ammo capacity or the number of charges for ballistic and energy weapons by %s.,
 magazines.sModDesc,Increases the ammo/charge regeneration rate for ballistic and energy weapons by %s.,
@@ -88,9 +80,6 @@ fluxcoil.sModDesc,"Increases flux capacity by a further %s/%s/%s/%s, making the 
 fluxdistributor.name,Flux Distributor,
 fluxdistributor.desc,"Increases the ship's flux dissipation by %s/%s/%s/%s, depending on hull size. Not as efficient as flux vents - most useful when added to a design that already carries the maximum possible number of vents.",
 fluxdistributor.sModDesc,"Increases flux dissipation by a further %s/%s/%s/%s, making the distributor as efficient as adding vents.",
-.name,,
-.desc,,
-.sModDesc,,
 shield_shunt.name,Shield Shunt,
 shield_shunt.desc,"Removes the ship's shields. The external emitter nodes are replaced with reinforced plating, increasing the ship's armor by %s.",
 shield_shunt.sModDesc,Increases the ship's armor by an additional %s.,
@@ -98,18 +87,15 @@ frontshield.name,Makeshift Shield Generator,
 frontshield.desc,"Installs a makeshift, inefficient shield generator on the ship. The shield emitter is locked in a forward-facing position and has a %s degree arc.
 
 The shield generator draws much of its power from engines and reduces the ship's top speed by %s.",
-frontshield.sModDesc,,
 missile_autoloader.name,Missile Autoloader,
 missile_autoloader.desc,<tooltip created in the script due to sections/other complexity>,
 missile_autoloader.sModDesc,Increases the post-reload cooldown to %s seconds.,
 hardenedshieldemitter.name,Hardened Shields,
 hardenedshieldemitter.desc,Reduces the amount of damage taken by shields by %s. Also reduces the chance that shields will be pierced by EMP arcs from weapons like the Ion Beam.,
-hardenedshieldemitter.sModDesc,,
 hardened_subsystems.name,Hardened Subsystems,
 hardened_subsystems.desc,"Increases peak operating time for ships that suffer degraded performance from extended deployment by %s.
 
 Also reduces the rate at which combat readiness degrades by %s.",
-hardened_subsystems.sModDesc,,
 heavyarmor.name,Heavy Armor,
 heavyarmor.desc,"Increases the ship's armor by %s/%s/%s/%s points, depending on hull size.",
 heavyarmor.sModDesc,Reduces the ship's maneuverability by %s.,
@@ -123,24 +109,20 @@ pdintegration.name,#Point Defense Integration,
 pdintegration.desc,"Reduces the ordnance point cost of small point-defense weapons by %s. The cost reduction only affects weapons that have PD capability as a feature of the weapon itself, and not when it's gained through other means such as from a hullmod.
 
 In addition, all point-defense weapons deal %s more damage to all targets.",
-pdintegration.sModDesc,,
 targetingunit.name,Integrated Targeting Unit,
 targetingunit.desc,"Extends the range of ballistic and energy weapons by %s/%s/%s/%s, depending on hull size. Can not work in conjunction with Dedicated Targeting Core.
 
 Most combat ships install either an Integrated Targeting Unit or a Dedicated Targeting Core, with the exception of more specialized variants.",
-targetingunit.sModDesc,,
 nav_relay.name,Nav Relay,
 nav_relay.desc,"When deployed in combat, increases nav rating of your fleet by %s/%s/%s/%s, depending on this ship's hull size.
 
 The total nav rating of your fleet increases the top speed of your deployed ships.",
-nav_relay.sModDesc,,
 neural_interface.name,Neural Interface,
 neural_interface.desc,"Links the flagship with another ship, allowing switching between ships without using a shuttle pod. Both ships must have a Neural Interface and not be commanded by an officer or an AI core. The transfer is instant if the combined deployment points of the ships are %s or less.
 
 If the linked ship is destroyed or leaves the battlefield, the flagship will establish a neural link with another ship with a Neural Interface. If the flagship is destroyed or leaves the battlefield, command will have to be physically transferred to another ship with a Neural Interface before a new link can be established.
 
 Both linked ships benefit from your personal combat skills as if you'd transferred command to them, regardless of which one you're controlling personally. As with ""transfer command"", some skill effects - such as those increasing ammo capacity, or other fixed ship stats - do not apply.",
-neural_interface.sModDesc,,
 neural_integrator.name,Neural Integrator,
 neural_integrator.desc,"An augmented version of Neural Interface that works with automated ships by enabling direct control of all of the ship's systems via the link, instead of having the controlling conscousness aspect simply direct the bridge crew.
 
@@ -149,7 +131,6 @@ Links the flagship with another ship, allowing switching between ships without u
 If the linked ship is destroyed or leaves the battlefield, the flagship will establish a neural link with another ship with a Neural Interface. If the flagship is destroyed or leaves the battlefield, command will have to be physically transferred to another ship with a Neural Interface before a new link can be established.
 
 Both linked ships benefit from your personal combat skills as if you'd transferred command to them, regardless of which one you're controlling personally. As with ""transfer command"", some skill effects - such as those increasing ammo capacity, or other fixed ship stats - do not apply.",
-neural_integrator.sModDesc,,
 frontemitter.name,Shield Conversion - Front,
 frontemitter.desc,"Locks the ship's omni-directional shield emitter to a front-facing position and extends its arc by %s. As with all frontal emitters, the shield will also deploy twice as quickly.",
 frontemitter.sModDesc,Reduces the amount of damage taken by shields by %s.,
@@ -158,20 +139,17 @@ adaptiveshields.desc,Converts frontal shields to omni-directional. Reduces the s
 adaptiveshields.sModDesc,Negates the shield arc penalty.,
 operations_center.name,Operations Center,
 operations_center.desc,Increases the command point recovery rate by %s when installed on the flagship.,
-operations_center.sModDesc,,
 phase_anchor.name,Phase Anchor,
 phase_anchor.desc,"Reduces the phase cloak's activation cost to %s. Increases the soft flux dissipation and weapon recharge rate by %s while phased.
 
 When suffering critical damage that would otherwise destroy or disable the ship, able to initiate an emergency dive deep into p-space. The ship counts as retreated and will emerge into normal space when combat is over, suffering an additional penalty to combat readiness equal to %s its deployment cost. The ship must have enough combat readiness to cover this cost to initiate the dive.
 
 Due to the immense distortions in p-space caused by such a maneuver, only one ship per battle - regardless of which side it's on - is able to perform it.",
-phase_anchor.sModDesc,,
 recovery_shuttles.name,Recovery Shuttles,
 recovery_shuttles.desc,Reduces the casualties suffered by fighter pilots by %s.,
 recovery_shuttles.sModDesc,Increases the fighter pilot casualty reduction to %s.,
 reinforcedhull.name,Reinforced Bulkheads,
 reinforcedhull.desc,"Increases the ship's hull integrity by %s. If disabled, the ship will not break apart and is almost always recoverable after the battle.",
-reinforcedhull.sModDesc,,
 fluxbreakers.name,Resistant Flux Conduits,
 fluxbreakers.desc,Decreases the amount of EMP damage taken from weapons such as Ion Cannons by %s. Also increases the ship's flux dissipation rate while venting by %s.,
 fluxbreakers.sModDesc,Increases the flux dissipation rate while venting by a further %s.,
@@ -181,33 +159,13 @@ safetyoverrides.desc,"Disabling safety protocols increases the ship's top speed 
 Reduces the peak performance time by a factor of %s, prevents the use of active venting, and drastically reduces weapon ranges past %s units.
 
 Can not be installed on civilian or capital ships.",
-safetyoverrides.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
 stabilizedshieldemitter.name,Stabilized Shields,
 stabilizedshieldemitter.desc,Reduces the amount of soft flux raised shields generate per second by %s. Does not affect the hard flux generated as a result of shields taking damage.,
 stabilizedshieldemitter.sModDesc,Converts %s of the hard flux damage taken by shields to soft flux.,
-.name,,
-.desc,,
-.sModDesc,,
 unstable_injector.name,Unstable Injector,
 unstable_injector.desc,"Increases the ship's top speed in combat by %s/%s/%s/%s su/second, depending on hull size.
 
 Interferes with weapons targeting and other vulnerable systems, reducing non-missile weapon range by %s and increasing the fighter replacement time by %s.",
-unstable_injector.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,# logistics hullmods,
-.desc,,
-.sModDesc,,
 additional_berthing.name,Additional Berthing,
 additional_berthing.desc,"Increases maximum crew capacity by %s/%s/%s/%s, depending on hull size, or by %s, whichever is higher.
 
@@ -252,137 +210,87 @@ solar_shielding.sModDesc,Increases the protection from solar coronae and similar
 surveying_equipment.name,Surveying Equipment,
 surveying_equipment.desc,"Reduces the heavy machinery and supplies required to perform surveys by %s/%s/%s/%s depending on hull size, down to a minimum of %s for each.",
 surveying_equipment.sModDesc,Increases the survey cost reduction by %s.,
-.name,,
-.desc,,
-.sModDesc,,
-.name,# standard built-in hullmods,
-.desc,,
-.sModDesc,,
 terminator_core.name,Terminator Core,
 terminator_core.desc,"Used by the terminator drone, this text should not be visible to the player.",
-terminator_core.sModDesc,,
 shared_flux_sink.name,Shared Flux Sink,
 shared_flux_sink.desc,"Handles %s of the flux dissipation of all attached modules. If modules are lost during battle, the extra flux dissipation is redistributed among the remaining modules. Up to %s of this extra dissipation applies to hard flux.",
-shared_flux_sink.sModDesc,,
 stealth_minefield.name,Stealth Minefield,
 stealth_minefield.desc,Mines attack enemy ships during battle.,
-stealth_minefield.sModDesc,,
 stealth_minefield_lt.name,Stealth Minefield,
 stealth_minefield_lt.desc,Mines attack enemy ships during battle.,
-stealth_minefield_lt.sModDesc,,
 bdeck.name,B-Deck,
 bdeck.desc,"Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched over to operate from a ""B-Deck"".
 
 Standby fighters are launched to rapidly bring the wings back up to full strength, and the fighter replacement rate is set to %s.",
-bdeck.sModDesc,,
 chassis_storage.name,Fighter Chassis Storage,
 chassis_storage.desc,Fighter replacement rate does not go down when fighters are lost.,
-chassis_storage.sModDesc,,
 shield_always_on.name,Shield Always On,
-shield_always_on.desc,,
-shield_always_on.sModDesc,,
 missile_reload.name,Missile Autoforge,
 missile_reload.desc,An autoforge inside the ship periodically fully reloads the magazines of all missile weapons.,
-missile_reload.sModDesc,,
 shielded_holds.name,Shielded Cargo Holds,
 shielded_holds.desc,"Commonly found on ships that can't always rely on shields to protect their cargo from cosmic radiation. Only a few tweaks are needed to have the shielding confound long-range cargo scans, reducing the probability of contraband being detected.",
-shielded_holds.sModDesc,,
 repair_gantry.name,Salvage Gantry,
 repair_gantry.desc,"Increases the resources gained from salvaging abandoned stations, derelicts, floating hulks, and other such by %s/%s/%s/%s, depending on hull size. Only affects the recovery of common resources such as fuel and supplies, and not rare items like blueprints. In addition, %s of the bonus applies to post-battle salvage.",
-repair_gantry.sModDesc,,
 phasefield.name,Phase Field,
 phasefield.desc,"The ship is able to run a low-grade phase field for extended periods of time, reducing its effective sensor profile by %s.",
-phasefield.sModDesc,,
 fluxshunt.name,Flux Shunt,
 fluxshunt.desc,Allows the ship to dissipate hard flux at %s of the normal rate while shields are on.,
-fluxshunt.sModDesc,,
 civgrade.name,Civilian-grade Hull,
 civgrade.desc,Increases sensor profile by %s. Reduces sensor strength by %s.,
-civgrade.sModDesc,,
 high_maintenance.name,High Maintenance,
 high_maintenance.desc,Increases the monthly maintenance supply cost by %s.,
-high_maintenance.sModDesc,,
 coherer.name,Energy Bolt Coherer,
 coherer.desc,<tooltip created in the script>,
-coherer.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
 tow_cable.name,Monofilament Tow Cable,
 tow_cable.desc,"Improves the maximum burn level of the slowest ship in the fleet by 1. Multiple tugs can not be used to speed up the same ship by more than 1.
 
 Can not be used in combat.",
-tow_cable.sModDesc,,
 drive_field_stabilizer.name,Drive Field Stabilizer,
 drive_field_stabilizer.desc,"Stabilizes the fleet's drive bubble, increasing the maximum burn of the fleet by %s. The effect of multiple stabilizers is cumulative.
 
 Increases the ship's sensor profile by %s.",
-drive_field_stabilizer.sModDesc,,
 ground_support.name,Ground Support Package,
 ground_support.desc,"Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
-ground_support.sModDesc,,
 advanced_ground_support.name,Advanced Ground Support,
 advanced_ground_support.desc,"Close support weapons and counter-measures for ground defenses. Increases the effective strength of planetary raids by %s, up to the total number of marines in the fleet.",
-advanced_ground_support.sModDesc,,
 delicate.name,Delicate Machinery,
 delicate.desc,"The ship systems require excessive maintenance and do not stand up well under the rigours of prolonged engagements.
 
 Increases the rate of in-combat CR decay after peak performance time runs out by %s.",
-delicate.sModDesc,,
 hbi.name,Heavy Ballistics Integration,
 hbi.desc,Reduces the ordnance point cost of large ballistic weapons by %s.,
-hbi.sModDesc,,
 vast_hangar.name,Vast Hangar,
 vast_hangar.desc,"The ship has a huge hangar and a commensurate small fleet of support craft.
 
 The number of fighter bays added by Converted Hangar is increased by %s, and its performance matches that of a dedicated fighter bay - all of the penalties and modifiers, including those to the ship's deployment cost, are negated.",
-vast_hangar.sModDesc,,
 rugged.name,Rugged Construction,
 rugged.desc,"Reduces most negative effects of d-mods by %s. If disabled or destroyed in combat, the ship has a %s chance to avoid new d-mods, and is almost always recoverable after the battle.
 
 In addition, the supply cost to recover from deployment - and to effect repairs if the ship is disabled - is reduced by %s.",
-rugged.sModDesc,,
 automated.name,Automated Ship,
 automated.desc,"This ship is fully automated, and does not require - and can not take on - any human crew.
 
 Automated ships usually require specialized equipment and expertise to maintain, resulting in a maximum combat readiness penalty of %s. This penalty can be offset by a fleet commander skilled in the use of automated ships.",
-automated.sModDesc,,
 advancedcore.name,Advanced Targeting Core,
 advancedcore.desc,"Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.
 
 Precludes the installation of a Dedicated Targeting Core or an Integrated Targeting Unit.",
-advancedcore.sModDesc,,
 supercomputer.name,Targeting Supercomputer,
 supercomputer.desc,"Extends the range of ballistic and energy weapons by %s. The range of point-defense weapons is only extended by %s.
 
 Also increases target-leading accuracy and greatly increases in-combat sensor range.",
-supercomputer.sModDesc,,
 ex_phase_coils.name,Experimental Phase Coils,
 ex_phase_coils.desc,Reduces phase cloak cooldown by %s.,
-ex_phase_coils.sModDesc,,
 high_frequency_attractor.name,High Volition Attractor,
 high_frequency_attractor.desc,An experimental modification allowing high-frequency motes to be warped in by the rift core on board the ship.,
-high_frequency_attractor.sModDesc,,
 ablative_armor.name,Ablative Armor,
 ablative_armor.desc,"An ancient design intended to stop micro-meteorites through sheer volume of material in place, before the advent of ""spaced"" armor.
 
 Reduces the effective armor strength for the damage reduction calculation to %s of its actual value. However, ships of this design tend to carry extremely heavy armor.",
-ablative_armor.sModDesc,,
 distributed_fire_control.name,Distributed Fire Control,
 distributed_fire_control.desc,"Much of the damage that takes weapons offline is to external control runs and power conduits. This ship's weapons are engineered to operate more independently, reducing their exposure to damage by %s and reducing the EMP damage taken by the ship overall by %s.",
-distributed_fire_control.sModDesc,,
 converted_bay.name,Converted Cargo Bay,
 converted_bay.desc,"This ship's cargo hold has been converted to house a pair of fighter bays. The improvised manufactory that produces fighter chassis is unreliable, and most components have minor defects. Fighter speed reduced by %s, and damage taken increased by %s.",
-converted_bay.sModDesc,,
 andrada_mods.name,Special Modifications,
 andrada_mods.desc,"During an inspection of an early prototype, the Supreme Executor was heard to comment unfavorably on exposed conduits running along the passageways, and the danger these must pose to the brave and loyal crew under combat conditions. 
 
@@ -391,165 +299,113 @@ The new chief designer, a loyal officer appointed by the Supreme Executor himsel
 If the passages are a bit narrower, conduits prone to overheating, and flush-set panels somewhat unwieldy to access, the official readiness reports include no criticism of the changes. Everyone agrees in both public and - as the Internal Security Ministry can attest - in private, that the stark grandeur of the Lion's Guard fleet is breathtaking.
 
 Crew casualties in combat are increased by %s. The base flux dissipation rate is reduced by %s, and the repair rate for disabled weapons and engines is reduced by %s.",
-andrada_mods.sModDesc,,
 vastbulk.name,Vast Bulk,
 vastbulk.desc,"The main body of this structure is vast and is, for practical purposes, capable of absorbing any amount of damage from conventional weapons without being destroyed.",
-vastbulk.sModDesc,,
 axialrotation.name,Axial Rotation,
 axialrotation.desc,This structure constantly rotates around its axis.,
-axialrotation.sModDesc,,
 anchorrotation.name,Anchor Rotation,
 anchorrotation.desc,This structure rotates around its anchor attachment point. For station modules only.,
-anchorrotation.sModDesc,,
 reduced_explosion.name,Reduced Explosion,
 reduced_explosion.desc,Reduced explosion radius and damage.,
-reduced_explosion.sModDesc,,
 always_detaches.name,Always Detaches,
 always_detaches.desc,Always detaches from parent structure when destroyed.,
-always_detaches.sModDesc,,
 never_detaches.name,Never Detaches,
 never_detaches.desc,Never detaches from parent structure when destroyed.,
-never_detaches.sModDesc,,
 no_weapon_flux.name,No Weapon Flux,
 no_weapon_flux.desc,Weapon fire costs no flux. Used on fighters for fine-grained control of effective shield hitpoints.,
-no_weapon_flux.sModDesc,,
 do_not_fire_through.name,Do Not Fire Through,
 do_not_fire_through.desc,"Weapons on other modules of a station will avoid firing through this module, even though the shots would go over it and not hit.",
-do_not_fire_through.sModDesc,,
 shard_spawner.name,Shard Spawner,
 shard_spawner.desc,Spawns shard ships when ship is disabled/destroyed.,
-shard_spawner.sModDesc,,
 do_not_back_off.name,Do Not Back Off,
 do_not_back_off.desc,Sets DO_NOT_BACK_OFF AIFlag,
-do_not_back_off.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,# ship skin buffs,
-.desc,,
-.sModDesc,,
 fourteenth.name,Fourteenth Battlegroup,
 fourteenth.desc,"This ship is a survivor of the original 14th Domain Battlegroup which founded the Hegemony. It is a prime specimen of the Domain Navy's ""decisive battle"" doctrine, particularly exhibited by a series of radical structural modifications (performed with pre-Collapse industrial methods) which allow the mounting of heavier armor plating by a flat increase of %s standard units, with only a %s reduction in speed and maneuverability. Exceptionally well-tuned energy systems increase flux throughput and capacity by %s over standard examples of this hull.",
-fourteenth.sModDesc,,
 heg_militarized.name,Militarized Hegemony Auxiliary,
 heg_militarized.desc,"This ship is - or was - on the Hegemony auxiliary list. Uparmour kits applied at Hegemony Naval yards resulting in no loss of performance for a %s/%s/%s/%s increase in armor strength, depending on hull size. Core power systems have been upgraded to military standards resulting in a %s improvement in overall handling, %s increase in flux capacity, a %s increase in flux dissipation, and an increase of maximum burn level by %s.",
-heg_militarized.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
-.name,# permanent ship debuffs,
-.desc,,
-.sModDesc,,
 comp_armor.name,Compromised Armor,
 comp_armor.desc,"This ship's armor has taken major and irreparable damage at some point in the past, or suffered from major errors in the manufacturing process. Armor rating reduced by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-comp_armor.sModDesc,,
 comp_hull.name,Compromised Hull,
 comp_hull.desc,"This ship's hull has taken major and irreparable damage at some point in the past, or suffered from major errors in the manufacturing process. Hull integrity reduced by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-comp_hull.sModDesc,,
 degraded_engines.name,Degraded Engines,
 degraded_engines.desc,"Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's engines are suffering from permanently degraded combat performance. 
 
 Top speed and maneuverability in combat reduced by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-degraded_engines.sModDesc,,
 degraded_drive_field.name,Degraded Drive Field,
 degraded_drive_field.desc,"Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's drive field is suffering from permanently degraded performance. 
 
 Maximum burn level decreased by %s. Sensor profile increased by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-degraded_drive_field.sModDesc,,
 faulty_grid.name,Faulty Power Grid,
 faulty_grid.desc,"Whether due to battle damage, manufacturing defects, or cycles of poor maintenance, this ship's power grid will never be capable of achieving peak performance.
 
 Flux capacity reduced by %s. Flux dissipation rate reduced by %s. Sensor profile increased by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-faulty_grid.sModDesc,,
 unstable_coils.name,Phase Coil Instability,
 unstable_coils.desc,"The phase coils on this ship are impossible to calibrate properly due to subtle flaws. Reduces the phase-time bonus by %s, reduces the peak performance time by %s, and increases the rate at which combat readiness degrades by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-unstable_coils.sModDesc,,
 comp_structure.name,Structural Damage,
 comp_structure.desc,"This ship's hull has likely taken extreme damage in the past, possibly to the point of breaking apart. Armor rating reduced by %s, hull integrity reduced by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-comp_structure.sModDesc,,
 glitched_sensors.name,Glitched Sensor Array,
 glitched_sensors.desc,"The ship's sensor array is damaged past any repair short of a complete hull overhaul. Weapon range in combat reduced by %s. Sensor strength reduced by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-glitched_sensors.sModDesc,,
 malfunctioning_comms.name,Malfunctioning Comms,
 malfunctioning_comms.desc,"The comm system has suffered serious damage, making punching through battlefield jamming even more of a challenge. Fighter engagement range reduced by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-malfunctioning_comms.sModDesc,,
 defective_manufactory.name,Defective Manufactory,
 defective_manufactory.desc,"The manufactory that produces fighter chassis is unreliable, and most components have minor defects. Fighter speed reduced by %s, and damage taken increased by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-defective_manufactory.sModDesc,,
 damaged_deck.name,Damaged Flight Deck,
 damaged_deck.desc,"The flight decks on this ship have taken major damage and seriously interfere with normal operation. Time to launch replacement fighters is increased by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-damaged_deck.sModDesc,,
 fragile_subsystems.name,Unreliable Subsystems,
 fragile_subsystems.desc,"A widespread loss of redundant components reduces peak operating time by %s, and increases the rate at which combat readiness degrades by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-fragile_subsystems.sModDesc,,
 comp_storage.name,Compromised Storage,
 comp_storage.desc,"The storage capacity of this ship is significantly degraded. Crew, cargo, and fuel capacity reduced by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-comp_storage.sModDesc,,
 increased_maintenance.name,Increased Maintenance,
 increased_maintenance.desc,"Increases the monthly maintenance supply cost by %s. Increases minimum crew required by %s. Decreases maximum combat readiness by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-increased_maintenance.sModDesc,,
 erratic_injector.name,Erratic Fuel Injector,
 erratic_injector.desc,"Increases fuel use by %s and decreases the zero-flux boost by %s su/second.
 
 Supply cost to recover from deployment reduced by %s.",
-erratic_injector.sModDesc,,
 faulty_auto.name,Faulty Automated Systems,
 faulty_auto.desc,"Increases minimum crew required by %s and decreases maximum combat readiness by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-faulty_auto.sModDesc,,
 damaged_mounts.name,Damaged Weapon Mounts,
 damaged_mounts.desc,"Reduces weapon turn rate by %s and increases recoil by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-damaged_mounts.sModDesc,,
 degraded_life_support.name,Degraded Life Support,
 degraded_life_support.desc,"Decreases maximum crew capacity by %s, and maximum combat readiness by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-degraded_life_support.sModDesc,,
 degraded_shields.name,Degraded Shields,
 degraded_shields.desc,"Increases the amount of damage taken by shields by %s.
 
 Supply cost to recover from deployment reduced by %s.",
-degraded_shields.sModDesc,,
-.name,,
-.desc,,
-.sModDesc,,
 destroyed_mounts.name,Destroyed Weapon Mounts,
 destroyed_mounts.desc,Some of the original weapon mounts on this ship have been damaged beyond repair and can no longer be used.,
-destroyed_mounts.sModDesc,,
 ill_advised.name,Ill-Advised Modifications,
 ill_advised.desc,"This hull's systems have been drastically modified from spec, likely without certified engineering oversight. Its systems appear to work correctly under routine conditions, but have a significant chance of critical malfunction when stressed.",
-ill_advised.sModDesc,,

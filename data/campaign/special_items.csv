@@ -1,7 +1,7 @@
 name,id,tags,tech/manufacturer,rarity,base price,stack size,cargo space,baseRaidDanger,icon,sound id,sound id drop,plugin,plugin params,desc,order
 Base ModSpec,modspec,modspec,,,1,1000,1,,graphics/icons/cargo/modspec2.png,ui_chip_pickup,ui_modspec_drop,com.fs.starfarer.api.campaign.impl.items.ModSpecItemPlugin,,"A collection of notes, guidelines, and practical examples that enable one to adapt and apply this modification to various hulls.",50
-# other items,,,,,,,,,,,,,,,
-# other items,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# industry-slotted items,,,,,,,,,,,,,,,
 Corrupted Nanoforge,corrupted_nanoforge,"nanoforge, pather4",Domain Restricted,,50000,1000,1,HIGH,graphics/icons/cargo/nanoforge_corrupted.png,ui_cargo_special_industrial_pickup,ui_cargo_special_industrial_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,"heavyindustry, orbitalworks","A powerful and versatile manufacturing ""black box"", capable of building itself out to an industrial scale, given the necessary raw materials and human assistance.
 
 This one has seen better days, and is incapable of reliably producing defect-free components. Nonetheless, having access to a nanoforge at all is a step up as far as starship construction goes.",139
@@ -30,9 +30,9 @@ Its use was banned by the Domain many cycles prior to the Collapse, so it's surp
 Dealmaker Holosuite,dealmaker_holosuite,"hist3t, pather4",Mbaye-Gogol,,120000,1000,1,EXTREME,graphics/icons/cargo/holosuite.png,ui_cargo_special_biotech_pickup,ui_cargo_special_tech_drop,com.fs.starfarer.api.campaign.impl.items.GenericSpecialItemPlugin,commerce,"Generates an interactive environment designed to stimulate negotiations with prospective business partners. Additionally, the self-adapting microemotion smart sensor systems built into such high-end VR suites  allow real-time tracking of the veracity of expression, providing a technically ethical advantage in business dealings to the facility operator.  
 
 The built-in marketing materials are keen to emphasize that this is not an AI, but merely a sophisticated weighted network in full compliance with the relevant Domain regulations.",180
-# other items,,,,,,,,,,,,,,,
-# other items,,,,,,,,,,,,,,,
-# other items,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+# blueprints,,,,,,,,,,,,,,,
 Low Tech Blueprint Package,low_tech_package,package_bp,,,20000,1000,1,,graphics/icons/cargo/blueprint_lowtech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,lowtech_bp,"Enables heavy industry to construct the more common ship hulls, weapons, and fighter LPCs from the ""low tech"" school of design.",200
 Midline Blueprint Package,midline_package,package_bp,,,25000,1000,1,,graphics/icons/cargo/blueprint_midline.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,midline_bp,"Enables heavy industry to construct the more common ship hulls, weapons, and fighter LPCs from the ""midline"" school of design.",210
 High Tech Blueprint Package,high_tech_package,package_bp,,,30000,1000,1,,graphics/icons/cargo/blueprint_hightech.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,hightech_bp,"Enables heavy industry to construct the more common ship hulls, weapons, and fighter LPCs from the ""high tech"" school of design.",220
@@ -42,15 +42,15 @@ Luddic Path Blueprint Package,LP_package,package_bp,,,18000,1000,1,,graphics/ico
 Luddic Church Blueprint Package,LC_package,package_bp,,,15000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,LC_bp,"A collection of hacks and after-market modification specs that enables heavy industry to construct hulls bearing Luddic Church markings. Since the modifications are cosmetic in nature, the hulls produced are otherwise pristine.",260
 XIV Battlegroup Blueprint Package,XIV_package,"package_bp, no_drop",,,1000000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,XIV_bp,A set of blueprints that enable heavy industry to produce the near-legendary hulls employed by the Hegemony-founding XIV Battlegroup. The continued existence - and location - of these blueprints is subject of many rumors.,270
 Hegemony Auxiliary Blueprint Package,heg_aux_package,package_bp,,,20000,1000,1,,graphics/icons/cargo/blueprint_basic.png,ui_chip_pickup,ui_bp_package_drop,com.fs.starfarer.api.campaign.impl.items.MultiBlueprintItemPlugin,heg_aux_bp,"A collection of modified blueprints that bring several civilian craft up to mil-spec or simply add Hegemony markings. Created shortly after the Collapse, some of these blueprints improve hull performance without the increased incidence of d-mods associated with later blueprint hacking efforts.",280
-# other items,,,,,,,,,,,,,,,
-# other items,,,,,,,,,,,,,,,
-# other items,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
 Base Ship Blueprint,ship_bp,single_bp,,,10000,1000,1,,graphics/icons/cargo/blueprint_shiphull.png,ui_chip_pickup,ui_ship_bp_drop,com.fs.starfarer.api.campaign.impl.items.ShipBlueprintItemPlugin,,Enables heavy industry to construct ship hulls described by this blueprint.,300
 Base Weapon Blueprint,weapon_bp,single_bp,,,2000,1000,1,,graphics/icons/cargo/blueprint_weapons.png,ui_chip_pickup,ui_weapon_bp_drop,com.fs.starfarer.api.campaign.impl.items.WeaponBlueprintItemPlugin,,Enables heavy industry to construct ship weapons described by this blueprint.,310
 Base Fighter Blueprint,fighter_bp,single_bp,,,3000,1000,1,,graphics/icons/cargo/blueprint_fighter.png,ui_chip_pickup,ui_fighter_bp_drop,com.fs.starfarer.api.campaign.impl.items.FighterBlueprintItemPlugin,,Enables heavy industry to construct fighter LPCs described by this blueprint.,320
-# other items,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
 Base Industry Blueprint,industry_bp,,,,20000,1000,1,,graphics/icons/cargo/blueprint_industry.png,ui_chip_pickup,ui_industry_bp_drop,com.fs.starfarer.api.campaign.impl.items.IndustryBlueprintItemPlugin,,Contains the technological specifications needed to construct a planet-side industry or structure.,400
-# other items,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
 # other items,,,,,,,,,,,,,,,
 Janus Device,janus,mission_item,,,100000,1000,1,,graphics/icons/cargo/janus_device.png,ui_cargo_special_ultratech_pickup,ui_cargo_special_ultratech_drop,com.fs.starfarer.api.campaign.impl.items.JanusDevicePlugin,,"This is the first generation Janus Device created by Elissa Zal based on the theories developed by Scylla Coureuse, among others.
 

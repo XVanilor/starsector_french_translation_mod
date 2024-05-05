@@ -19,20 +19,53 @@ data_dir = os.path.join(mod_path, 'data')
 translations_dir = os.path.join(mod_path, "translations")
 
 
-def sanitize_string_for_csv(input: str) -> str:
-
-    return '"'+input.replace('"', '\\"')+'"'
-
-
 class TranslationFile:
-    translation_file_path: Path
 
-    def __init__(self, translation_file_path: Path):
+    file: Path
+    translation_map: dict
 
-        if not os.path.exists(translation_file_path):
-            raise FileNotFoundError(f"Le fichier de traduction situé à {translation_file_path} n'existe pas")
+    def __init__(self, file_path: Path):
+        self.file = file_path
+        self.translation_map = {}
 
-        self.translation_file_path = translation_file_path
+    def load(self) -> dict:
+
+        self.translation_map = {}
+        if not self.file.exists():
+            return self.translation_map
+
+        with open(self.file, "r") as fp:
+            reader = csv.reader(fp)
+            # Passer le header
+            reader.__next__()
+
+            for row in reader:
+                string_id = row[0]
+                original_str = row[1]
+                translated_str = row[2]
+
+                self.translation_map[string_id] = (original_str, translated_str)
+
+        return self.translation_map
+
+    def update_from_dict(self, new_translation_dict: dict):
+
+        new_trans_map = dict(new_translation_dict, **self.translation_map)
+        self.translation_map = new_trans_map
+        return self.translation_map
+
+    def write(self):
+
+        with open(self.file, "w") as fp:
+            writer = csv.writer(fp)
+            # Écrire le header
+            writer.writerow(["id_do_not_translate", "original_text", "translation"])
+
+            for string_id in self.translation_map:
+                content = self.translation_map[string_id]
+                if content[0] == "":
+                    continue
+                writer.writerow([string_id, content[0], content[1]])
 
 
 class Parsable(ABC):
@@ -49,7 +82,7 @@ class Parsable(ABC):
         self._translation_file_path = Path(os.path.join(translations_dir, self.file))
 
     @abstractmethod
-    def extract_translatable_content(self) -> str:
+    def extract_translatable_content(self) -> dict:
         pass
 
     @abstractmethod
@@ -72,26 +105,6 @@ class Parsable(ABC):
 
     def get_data_file_path(self) -> Path:
         return self._data_file_path
-
-    def get_translation_file(self) -> TranslationFile:
-
-        return TranslationFile(self.get_translation_file_path())
-
-
-class TranslatableString:
-
-    file: str
-    id: str
-    original_string: str
-
-    def __init__(self, file: str, id: str, original_string) -> None:
-        self.file = file
-        self.id = id
-        self.original_string = original_string
-
-    # Optimisation trick to calculate set() more efficiently
-    def __hash__(self):
-        super().__hash__(self.file+"-"+self.id)
 
 
 class CsvFile(Parsable):
@@ -118,12 +131,12 @@ class CsvFile(Parsable):
         return ".".join(row[i] for i in csv_ids_index)
 
     @staticmethod
-    def __get_string_id(row_id: str, column_name: str):
+    def __get_string_id(row_id: str, column_name: str) -> str:
         return "{}.{}".format(row_id, column_name)
 
-    def extract_translatable_content(self) -> list[TranslatableString]:
+    def extract_translatable_content(self) -> dict:
 
-        translations = []
+        translations = {}
 
         with open(self.get_data_file_path(), "r", encoding="utf-8") as fp:
 
@@ -142,7 +155,7 @@ class CsvFile(Parsable):
                     translatable_string = row[i]
 
                     string_id = self.__get_string_id(self.__get_row_id(id_indexes, row), column_name)
-                    translations.append(TranslatableString(self.file, string_id, translatable_string))
+                    translations[string_id] = (translatable_string, "")
 
         return translations
 
@@ -216,41 +229,21 @@ def fetch_game_translations(src_file: Parsable):
 
     # Les chaînes de caractères à traduire ont toutes été extraites du fichier source
     # On les écrit dans un fichier formaté
-    with open(translation_file_path, "w") as fp:
+    print(f"Écriture des chaînes à traduire dans {translation_file_path}")
 
-        print(f"Écriture des chaînes à traduire dans {translation_file_path}")
-
-        writer = csv.writer(fp)
-
-        # On écrit le header CSV du fichier
-        writer.writerow(["id_do_not_translate", "original_text", "translation"])
-
-        # On écrit les données à traduire
-        for translatable_data in trans_data:
-            writer.writerow([translatable_data.id, translatable_data.original_string, ""])
+    translation_file = TranslationFile(translation_file_path)
+    translation_file.load()
+    translation_file.update_from_dict(trans_data)
+    translation_file.write()
 
 
 def write_translations_to_data_file(src_file: Parsable):
 
-    translation_map = {}
+    translation_file = TranslationFile(src_file.get_translation_file_path())
+    translation_file.load()
 
-    # Construire la map string_id -> translated string
-    with open(src_file.get_translation_file_path(), "r") as trans_fp:
-        reader = csv.reader(trans_fp)
-        # Passer le header
-        reader.__next__()
-
-        for translation in reader:
-
-            string_id = translation[0]
-            original_string = translation[1]
-            translated_string = translation[2]
-
-            if translated_string != "":
-                translation_map[string_id] = translated_string
-            else:
-                print("Il manque une traduction pour la chaîne {}:{}".format(src_file.get_path(), string_id))
-                translation_map[string_id] = original_string
+    translation_map = dict(map(lambda kv: (kv[0], kv[1][1] if kv[1][1] != "" else kv[1][0]),
+                               translation_file.translation_map.items()))
 
     # Réécrire du fichier présent dans data
     original_file = src_file.get_data_file_path()
@@ -262,10 +255,8 @@ def write_translations_to_data_file(src_file: Parsable):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Copier et traiter des fichiers .csv pour la traduction de Starsector.')
-    # Commented: For now, the root folder is always ../../starsector-core/data
-    # parser.add_argument('--root', required=True, help="Le chemin vers le dossier de StarSector")
-    subparser = parser.add_subparsers(help="Subcommand command help", dest="command")
+    parser = argparse.ArgumentParser(description='Copier et traiter des fichiers de texte pour la traduction de Starsector.')
+    subparser = parser.add_subparsers(dest="command")
     subparser.add_parser("fetch", help="Fetch command help")
     subparser.add_parser("write", help="Write command help")
 

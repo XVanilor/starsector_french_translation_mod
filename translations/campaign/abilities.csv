@@ -1,5 +1,5 @@
 id_do_not_translate,original_text,translation
-transponder.name,Transponder,Coucou
+transponder.name,Transponder,coucou
 transponder.desc,Broadcast your identity; required for legal trade.,
 go_dark.name,Go Dark,
 go_dark.desc,Reduce sensor profile at the cost of burn level.,
@@ -11,10 +11,6 @@ sustained_burn.name,Sustained Burn,
 sustained_burn.desc,Boost burn level at the cost of acceleration and wind-up time.,
 interdiction_pulse.name,Interdiction Pulse,
 interdiction_pulse.desc,Slow down another fleet heading towards the source of the pulse.,
-.name,,
-.desc,,
-.name,,
-.desc,,
 scavenge.name,Scavenge,
 scavenge.desc,Pick through a debris field for anything of value.,
 gravitic_scan.name,Neutrino Detector,

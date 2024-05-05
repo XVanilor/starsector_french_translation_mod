@@ -289,11 +289,9 @@ Three meticulously calibrated lens assemblies guide photons within the ignition 
 
 The extreme range at which targets can be tracked and destroyed makes the HIL excel in safely providing close support to friendly ships that are engaged in a melee. It is a favored weapon of captains that can manage the flux cost associated with operating it.",
 autopulse.text1,"Numerous built-in capacitors are at the core of this extremely efficient, yet potent energy weapon. The high burst damage from expending built-up charges is offset by the comparatively low sustained firing rate.",
-guardian.text1,"A collection of smaller lasers mounted together on a rotating pod, with a built-in capacitor allowing extremely high burst damage vs fighters and missiles.
+guardian.text1,"Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of officially incorporated volume. Nothing like this, however, could possibly have been deployed by the Domain drone armadas.
 
-The Paladin is a military grade PD system that is usually only deployed on capital ships due to its high production and flux costs. Can detect and destroy incoming strike weapons and enemy fighters that have penetrated the capital ship's defensive escort screen. 
-
-A combination of an autonomous sub-gamma AI core for targeting and five separate carbon dioxide lasers make this weapon exceptionally effective in point defense. A dedicated rotator power supply makes target tracking almost instantaneous. The prohibitive energy requirement usually means that the weapon is only activated for seconds at a time, but that is usually enough to deal with any PD threat.",
+There are elements of standard droneships within the hull structure, but they are covered by malevolently angled glacises and illogical tangles of conduit. Surely this monstrous vessel is the product of some deranged Domain naval architect, or a production chip corrupted by exposure to kilolights of faulty drive field?",
 tpc.text1,"A bulky energy weapon from an early epoch, the TPC is built directly into the Onslaught's hull and provides overwhelming frontal firepower.
 
 Designed before modular energy weapons were universally trusted by Domain procurement committees, this weapon was coded into the Onslaught's blueprint because no other hull of the time was large enough or had reactors capable of generating the requisite power.
@@ -479,8 +477,14 @@ dagger.text1,"Armed with a highly damaging torpedo, the Dagger is fragile but eq
 talon.text1,"Fast and cheap, the Talon sports surprising firepower and is capable of dispatching enemy fighters. It can also deal appreciable damage to larger ships when used en masse, though such use usually results in heavy pilot losses.",
 hoplon.text1,"The Khopesh can deliver an accurate and devastating rocket barrage to its target. Safer and more reliable in dealing its damage than other bombers, it also doesn't boast quite the same damage potential.",
 claw.text1,"Nimble and equipped with a low-grade shield generator, the Claw is primarily a support fighter. The EMP damage it deals is temporarily crippling to poorly-shielded targets, but it's incapable of dealing much permanent damage on its own.",
-drone_borer.text1,"Slow and not very sturdy, this combat-modified mining drone is nonetheless capable of keeping hostiles off its mothership for a time. Fielded in numbers, it can even present a credible threat to smaller combat ships.",
-drone_terminator.text1,"A point-defense drone built around the dreaded Terminator Core target analyzer, which finds transient weak points on missiles and fighters with unerring precision. Rumors about the core's AI intermittently exceeding the generally-allowed delta level during complex combat situations remain unproven.",
+drone_borer.text1,Deploys several combat-modified mining drones. The drones are highly autonomous and capable of operating far from the mothership.,
+drone_terminator.text1,"Deploys a single advanced drone that features a phase cloak, a modified phase skimmer, and an arsenal of weapons that would be impressive even on a heavy fighter.
+
+Even more impressive is the mini-fac that's capable of producing replacement drones in combat, ensuring that the host ship is not without escort for long.
+
+The drone also possesses an aggressive delta-level AI personality that allows it to roam much farther from the mothership than most other drone systems - that are either entirely on remote-control, or feature a sub-gamma personality at best.
+
+This design is also unique in that it was created through the cooperation of two rival corporations. Fabrique Orbitale provided the chassis and system designs, while Tri-Tachyon experts were responsible for the controlling AI.",
 doom.text1,"Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
 
 Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",
@@ -513,9 +517,6 @@ Numerous vulnerabilities leave the Picket-class drone easy to underestimate, but
 rampart.text1,"Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of officially incorporated volume. Frontier garrisons were often bolstered by drone ships, and they were deployed liberally against rebellious worlds to tip the terrible balance of attrition, setting the industrial might of the Domain versus the lives of 'freedom fighters'.
 
 Little more than an artillery platform with engines, the Rampart was attached to drone units to provide the heavy firepower necessary to meet cruiser and capital class hulls in the line of combat or to crack armored orbital fortresses. In either role, heavy losses were anticipated, so the Rampart was designed with highly modular components which allowed badly damaged hulls to be rapidly cannibalized to repair lightly damaged hulls up to combat capacity without the need for shipyard facilities.",
-guardian.text1,"Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of officially incorporated volume. Nothing like this, however, could possibly have been deployed by the Domain drone armadas.
-
-There are elements of standard droneships within the hull structure, but they are covered by malevolently angled glacises and illogical tangles of conduit. Surely this monstrous vessel is the product of some deranged Domain naval architect, or a production chip corrupted by exposure to kilolights of faulty drive field?",
 ziggurat.text1,"A plaque on the bridge declares this ship class to be the result of ""Project Ziggurat"". It appears to be built on technology created in a Tri-Tachyon prototype lab unknown to the Persean Sector at-large. In addition to advanced conventional loadout, there are certain one-off components of exotic manufacture - it is possible to reverse-engineer undamaged examples and produce replacements, but the underlying operating principles do not resemble any known Domain technology and thus remain a mystery.
 
 The Ziggurat-class ship once had a human crew; or, at least, was intended to be crewed by humans. No sign of them remains as physical evidence or in databanks. Even the cleanest Hegemony warship will have some initials and a rude word or two about the CO scratched behind a maintenance hatch. Here, nothing.",
@@ -621,11 +622,7 @@ cancel_assignment.text1,"Cancel the selected assignment. Ships and fighter wings
 
 If the selection is a waypoint, it will also be removed.",
 autopilot.text1,"Enable autopilot. Your flagship will navigate and fight automatically and will be assigned tasks as appropriate, along with the rest of your fleet.",
-.text1,,
-.text1,,
-.text1,,
 asteroid.text1,"A pitted chunk of metal, ice, or rock hurtling through space. Mainly significant for being a navigational hazard.",
-.text1,,
 gas_giant.text1,"Primarily composed of hydrogen and helium gases. The temperature and pressure at the core are extreme, but not enough to sustain the deuterium fusion that would turn the planet into a brown dwarf star.",
 ice_giant.text1,"A giant planet composed primarily of water, ammonia and methane. Within the depths, gravity generates enough pressure to form a core of metallic hydrogen.",
 lava.text1,"A geologically unstable planet without a permanently formed crust. Glowing fissures and active volcanoes litter the surface, the magma they spew forth combining to form flows that travel hundreds of kilometers across the charred surface.",
@@ -700,7 +697,6 @@ displacer.text1,Teleports the ship forward in the direction it's traveling. The 
 displacer_degraded.text1,Teleports the ship forward in the direction it's traveling. The system slowly builds up to two charges which can then be expended in short order.,
 drone_pd.text1,Deploys a large number of laser-armed defensive drones. The drones can be ordered to closely guard the ship or roam freely around it.,
 drone_pd_x2.text1,Deploys several defensive drones armed with light machine guns. The drones can be ordered to closely guard the ship or roam freely around it.,
-drone_borer.text1,Deploys several combat-modified mining drones. The drones are highly autonomous and capable of operating far from the mothership.,
 drone_sensor.text1,Deploys a pair of drones whose on-board sensors improve the ship's weapon and sensor range. Each drone is also armed with an ion cannon.,
 ammofeed.text1,Activates an advanced - but jamming-prone - mechanism for quickly delivering ammo to the ship's ballistic weapon emplacements. The mechanism must be re-calibrated and cooled before it can be used again.,
 emp.text1,"Activates an EMP generator. Nearby missiles, fighters, weapon emplacements and engines of enemy ships are all targeted and can be disabled in short order.
@@ -709,13 +705,6 @@ Unfortunately, on-board weapon systems must be shut down to provide power for th
 phasecloak.text1,"Temporarily moves the ship into an alternate dimension known as p-space. The ship can still be detected by its phase coil emissions, but can not be hit by any weapons. Flux can not be dissipated in p-space, resulting in a constant buildup that forces the ship to come back to normal space eventually. Subjective time passes more quickly for the ship and its crew while in p-space.
 
 The phase cloak generator is large and has significant power requirements, and so generally replaces shields as a ship's primary means of defense.",
-drone_terminator.text1,"Deploys a single advanced drone that features a phase cloak, a modified phase skimmer, and an arsenal of weapons that would be impressive even on a heavy fighter.
-
-Even more impressive is the mini-fac that's capable of producing replacement drones in combat, ensuring that the host ship is not without escort for long.
-
-The drone also possesses an aggressive delta-level AI personality that allows it to roam much farther from the mothership than most other drone systems - that are either entirely on remote-control, or feature a sub-gamma personality at best.
-
-This design is also unique in that it was created through the cooperation of two rival corporations. Fabrique Orbitale provided the chassis and system designs, while Tri-Tachyon experts were responsible for the controlling AI.",
 reservewing.text1,"Deploys reserve fighters that can fight for a short time before returning to the carrier, temporarily doubling the number of fighters in the wing.",
 targetingfeed.text1,"Sends real-time targeting data to fighter wings from this carrier, temporarily increasing their damage.",
 recalldevice.text1,"Teleports all fighters back to the carrier, allowing them to be quickly refitted and relaunched.",
@@ -759,9 +748,6 @@ planet_raesvelg.text1,"Water and ammonia ice form the immense rifts and chaotica
 planet_skathi.text1,"Drifts of nitrogen and methane ice form most of the crust over a rocky silicate/ice mantle which pierces the cowl of this frozen moon. The Hegemony once granted Tri-Tachyon a license for exclusive development, consisting primarily of a sprawling processing plant for volatiles siphoned from Niflheim and the requisite support infrastructure. Rumors abound that it's all the cover story for a secret research facility performing science deemed illegal under Domain law, but inspectors sent in times of Tri-Tachyon cooperation have never included anything untoward in their reports.",
 station_ragnar.text1,"The boneyard of the Hegemony; in addition to the garrison stationed here to support system patrols and a fleet-in-being to discourage League incursions, the Ragnar complex stores ship hulks awaiting refurbishing or the haul to Arcadia for ship-breaking, a task generally contracted to friendly megacorps. The station is traditionally commanded by an aging senior officer sent to quietly live out their mediocrity.",
 station_mimir.text1,"The product of a Tri-Tachyon initiative to modify the common gas-giant ""mine"" which siphons gases using the Ouyang Process which, although energy-hungry, becomes self-sustaining once a steady pull of heavy isotopes is attained. From Niflheim a particularly heavy mix of volatiles can be drawn, and these are processed on the moon of Skathi into countless useful forms.",
-.text1,,
-.text1,,
-.text1,,
 planet_maxios.text1,"A small terrestrial planet, Maxios was once the cosmopolitan hub of the system. Now spotted with ruins and impacts both ancient and fresh, the crumbling orbital defense system provides only intermittent coverage. The polity has effectively collapsed and the current population is unknown. Looters and survivors clash occasionally, the weapons-blink and electromagnetic noise of low-level combat sputtering like a gas giant’s electrical storms.",
 hot_gas_giant.text1,"Anomalously close to its parent star, this gas giant probably formed in the outer system and later migrated inward due to a chance encounter with some rogue cosmic mass. Primarily composed of hydrogen and helium gases, the temperature and pressure at the core are extreme. ",
 planet_tartessus.text1,"Seat of the local branch of the Luddic Church and economic center of the system. The quiet cosmopolitan centers of Tartessus housing the Eos Exodus Curia are clustered around calm, warm seas. The world's population is dominated by Luddic practitioners of various sects and, while large, is mostly rural and agrarian, eking out a generally devout existence through subsistence farming and export of handcrafts.",
@@ -837,7 +823,9 @@ planet_druj.text1,"A dead and barren world, albeit with an appreciable magnetic 
 planet_aka_mainyu.text1,"Tidally locked to its primary, the hot gas giant Aka Mainyu's day side is an eternal hellish maelstrom with winds of vaporized metals reaching speeds of thousands of kilometers per hour. A half million tonnes of ionized gas is blasted from the atmosphere each second creating a complex whorled magnetotail with detectable effects across the entire inner volume of the Duzahk system. ",
 toxic_cold.text1,"A frozen world enveloped by a thick nitrogen smog dappled with ethane and methane clouds. The surface is formed of eroded water-ice, windswept dunes of organic compounds, and hydrocarbon seas. Liquid water erupts bubbling with methane from cryovolcanoes driven by tidal heating and decaying radioactive elements deep within the mantle.",
 slipstream.text1,"A flow in hyperspace, akin to currents navigated by ancient seafarers back on Old Earth.",
-nebula.text1,"Interstellar clouds of hydrogen, helium, and dust that cause significant sensor noise that may aid a fleet hiding within. The (relatively) thick medium also interferes with drive field operation.",
+nebula.text1,"The voluminous but ungainly hull of the Mbaye-Gogol 430 ""Nebula"" does little to enhance the romance of interstellar travel but it does ensure a respectable passenger and cargo capacity for a ship of its class. Indeed, the Nebula has slowly come to dominate mid-tier passenger service since the muted reception of its first line of production.
+
+The Nebula is equipped with a forward-facing shield to enhance the safety of passengers and extend the hull plating's maintenance schedule. And the Sector being what it is, several ballistic turrets and anti-missile all-band flare launchers have been mounted at fortuitous locations to assure paying passengers that their well-being is a top priority of the operator.",
 event_horizon.text1,The gravitational flux near the event horizon of a black hole is extreme.,
 pulsar_beam.text1,"A relativistic, magnetized jet combined with intense radiation. Commonly emitted by neutron stars.",
 corona.text1,A halo of high temperature plasma which surrounds a star; most ships are not built to withstand prolonged exposure to the extreme radiation bombardment from the corona and will take damage if they remain within it.,
@@ -878,9 +866,6 @@ forgevats.text1,A fixed architecture nanforge system which allows rapid conversi
 starliner.text1,"A passenger liner from a more civilized era, the Mbaye-Gogol 440 ""Starliner"" was built to travel between the systems of the Domain in speed and comfort. The Starliner features private first-class cabins, two classes of food service, a zero-G theater, and even a small landing/launch bay for exclusive use by executive-class passengers. (Being a civilian ship there are, of course, no facilities for fighter repair and rearmament).
 
 The Starliner is equipped with a forward shield to ensure passenger safety and protect the hull from routine abrasion. Refitted for the current realities of the Sector, this ship class is routinely equipped with all-band anti-missile flare launchers as well as a number of gun turrets; this serves not only to evoke a sense of adventure, but discourage casual piracy while justifying a ""munitions surcharge"" on each ticket sale.",
-nebula.text1,"The voluminous but ungainly hull of the Mbaye-Gogol 430 ""Nebula"" does little to enhance the romance of interstellar travel but it does ensure a respectable passenger and cargo capacity for a ship of its class. Indeed, the Nebula has slowly come to dominate mid-tier passenger service since the muted reception of its first line of production.
-
-The Nebula is equipped with a forward-facing shield to enhance the safety of passengers and extend the hull plating's maintenance schedule. And the Sector being what it is, several ballistic turrets and anti-missile all-band flare launchers have been mounted at fortuitous locations to assure paying passengers that their well-being is a top priority of the operator.",
 mudskipper.text1,"Most commonly used as interplanetary ferry, the Mudskipper is indeed interstellar-capable. The ship has no built-in shield generator so must rely on its durable - for a civilian craft - armor to protect passengers and cargo. There is little hope for the Mudskipper in combat, but it is generally equipped with a rear-facing turret to foil attacks by the ever-popular Salamander missile.
 
 First produced as the ""Pegasus""-class but due to a trademark claim was reverted to its model code in official documentation. Operators quickly anointed the MGA-220 model with the name ""Mudskipper"" and the name. This tough little ship has been a mainstay in backwater civilian transport for centuries, and although not pretty, the rugged construction simplifies maintenance and generous bay doors allow for great versatility. To this point, the Mudskipper's image in the public mind was cemented by a somewhat unlikely holovid sequence featuring a Mudskipper transporting a herd of bovids to a picturesque arid-terraform.",
@@ -922,7 +907,6 @@ cryopods.text1,A clutch of cryopods drifting through space. These likely contain
 supply_cache.text1,"A cache of supplies, weapons, or other equipment, drifting and forgotten - until now.",
 hidden_cache.text1,"A cache hidden in a deep well inside a large asteroid, with no indication of what might be found inside.",
 weapon_cache.text1,These drifting cargo pods give peculiar readings unique to the spacecraft armaments.,
-.text1,,
 mairaath_station1.text1,"Destroyed in the attack on Mairaath of Cycle 82, this cold wreckage of the former astropolis remains in orbit in a cloud of its own debris.",
 mairaath_station2.text1,"Formerly one of the three astropoli of Mairaath, this station was rammed by a Prometheus-class fuel carrier and torn from orbit on a trail of fusion fire and radioactive dust. It has since been taken over by scavengers and made into a pirate haven.",
 planet_mazalot.text1,"Civic center of the Zagan system, Mazalot is nonetheless a poor and unstable polity known for a series of authoritarian governments that alternately pander to and oppress the majority Luddic population. The planet itself is a story of successful terraforming, albeit water-poor. Emplacing and sustaining orbital infrastructure is inconvenient due to an exceptionally strong magnetic field. This has done little to stabilize the independent-minded populace.",
@@ -1015,7 +999,6 @@ Proponents of the 'Cruiser School' criticized the Legion for insufficient specia
 ai_cores.text1,"A rare and valuable independent AI core. This is the physical soul of an artificial intelligence, an artifact of astounding complexity capable of sophisticated thought exceeding the human mind. An object of fear, worship, and avarice; wars have been fought over the use and regulation of AI.
 
 An AI core is incapable of affecting the outside world on its own. Exploitation of its vast abilities requires that the core be submerged in a coolant bath and attached to bundles of high-capacity data lines appropriate to its tasks. When emplaced, the core is required to be fitted with an entirely analogue loyalty-assurance device; usually this takes the form of a crude chemical explosive with a mechanical trigger.",
-.text1,,
 survey_data.text1,"This TriPad contains a recent survey database which holds information on the economic, industrial, and strategic qualities of a celestial object organized according to the traditional guidelines of the Domain Colonial Ministry. Surveys such as this are an essential element of successful military operations, colonization efforts, and corporate ventures.",
 survey_data_1.text1,"This TriPad contains a recent survey database which holds information on the economic, industrial, and strategic qualities of a celestial object organized according to the traditional guidelines of the Domain Colonial Ministry. Surveys such as this are an essential element of successful military operations, colonization efforts, and corporate ventures.
 
