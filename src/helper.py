@@ -176,7 +176,8 @@ def fetch_game_translations(src_file: Parsable):
     print("Extraction des chaînes à traduire...")
     trans_data = src_file.extract_translatable_content()
 
-    # Les chaînes de caractères à traduire ont toutes été extraites du fichier source, on les écrit dans un fichier formatté
+    # Les chaînes de caractères à traduire ont toutes été extraites du fichier source
+    # On les écrit dans un fichier formaté
     with open(translation_file_path, "w") as fp:
 
         print(f"Écriture des chaînes à traduire dans {translation_file_path}")
