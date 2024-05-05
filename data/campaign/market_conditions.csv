@@ -51,7 +51,7 @@ Population,population_10,,TRUE,com.fs.starfarer.api.impl.campaign.econ.Populatio
 ,,,,,,,
 ,,,,,,,
 ,,,,,,,
-# event-related market conditions,,,,,,,
+,,,,,,,
 Food Shortage,event_food_shortage,,TRUE,com.fs.starfarer.api.impl.campaign.econ.FoodShortage,"There's a temporary lack of available food on $market.
 - Stability reduced by $stabilityPenalty
 - Approximately $neededFood units of food needed to end shortage
@@ -76,14 +76,14 @@ The pirates most likely have a base somewhere relatively nearby.",graphics/icons
 Hostile Activity,hostile_activity,,TRUE,com.fs.starfarer.api.impl.campaign.intel.events.HostileActivity,,graphics/icons/markets/pirate_activity.png,1350
 Luddic Path Cells,pather_cells,,TRUE,com.fs.starfarer.api.impl.campaign.intel.bases.LuddicPathCells,,graphics/icons/markets/pather_cells.png,1400
 ,,,,,,,
-# stand-alone conditions,,,,,,,
+,,,,,,,
 Trade Disruption,shipping_disruption,,TRUE,com.fs.starfarer.api.impl.campaign.econ.ShippingDisruption,,graphics/icons/markets/trade_disruption.png,1000
 ,,,,,,,
-# misc,,,,,,,
+,,,,,,,
 Comm Relay (hidden),comm_relay,,TRUE,com.fs.starfarer.api.impl.campaign.econ.CommRelayCondition,Hidden condition; does not need icon.,,
 ,,,,,,,
 ,,,,,,,
-# procgen conditions,,,,,,,
+,,,,,,,
 Habitable,habitable,TRUE,,com.fs.starfarer.api.impl.campaign.econ.Habitable,Human beings can survive unprotected exposure to the surface conditions of $market.,graphics/icons/markets/habitable.png,21
 ,,,,,,,
 ,,,,,,,

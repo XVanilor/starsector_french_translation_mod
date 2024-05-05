@@ -19,6 +19,22 @@ data_dir = os.path.join(mod_path, 'data')
 translations_dir = os.path.join(mod_path, "translations")
 
 
+def sanitize_string_for_csv(input: str) -> str:
+
+    return '"'+input.replace('"', '\\"')+'"'
+
+
+class TranslationFile:
+    translation_file_path: Path
+
+    def __init__(self, translation_file_path: Path):
+
+        if not os.path.exists(translation_file_path):
+            raise FileNotFoundError(f"Le fichier de traduction situé à {translation_file_path} n'existe pas")
+
+        self.translation_file_path = translation_file_path
+
+
 class Parsable(ABC):
 
     file: str
@@ -37,7 +53,7 @@ class Parsable(ABC):
         pass
 
     @abstractmethod
-    def write_translations_to_data(self) -> None:
+    def rewrite_data_file(self, inf, outf, translation_map: dict):
         pass
 
     @abstractmethod
@@ -57,6 +73,10 @@ class Parsable(ABC):
     def get_data_file_path(self) -> Path:
         return self._data_file_path
 
+    def get_translation_file(self) -> TranslationFile:
+
+        return TranslationFile(self.get_translation_file_path())
+
 
 class TranslatableString:
 
@@ -72,18 +92,6 @@ class TranslatableString:
     # Optimisation trick to calculate set() more efficiently
     def __hash__(self):
         super().__hash__(self.file+"-"+self.id)
-
-    def to_csv_line(self):
-
-        # On encapsule la chaîne de caractères originale dans des " pour la lire plus facilement en CSV
-        formatted_data = '"'+self.original_string.replace('"', '\\"')+'"'
-
-        return "{},{},{}\n".format(self.id, formatted_data, "")
-
-
-class TranslationFile:
-
-    strings: set[TranslatableString]
 
 
 class CsvFile(Parsable):
@@ -102,6 +110,17 @@ class CsvFile(Parsable):
     def get_id(self) -> str:
         return ".".join(self.key_columns)
 
+    def __get_translatable_column_ids(self, csv_header: list[str]) -> list[int]:
+        return [csv_header.index(i) for i in self.translatable_fields if i in csv_header]
+
+    @staticmethod
+    def __get_row_id(csv_ids_index: list[int], row: list[str]) -> str:
+        return ".".join(row[i] for i in csv_ids_index)
+
+    @staticmethod
+    def __get_string_id(row_id: str, column_name: str):
+        return "{}.{}".format(row_id, column_name)
+
     def extract_translatable_content(self) -> list[TranslatableString]:
 
         translations = []
@@ -115,24 +134,43 @@ class CsvFile(Parsable):
             # Retrouver les indexes numériques des champs servant d'ID
             id_indexes = [header.index(i) for i in self.key_columns if i in header]
             # Retrouver les indexes numériques des champs traduisibles
-            translatable_indexes = [header.index(i) for i in self.translatable_fields if i in header]
+            translatable_indexes = self.__get_translatable_column_ids(header)
 
             for row in reader:
-
                 for i in translatable_indexes:
                     column_name = header[i]
                     translatable_string = row[i]
-                    id_value = "{}.{}".format(".".join(row[i] for i in id_indexes), column_name)
 
-                    translations.append(TranslatableString(self.file, id_value, translatable_string))
+                    string_id = self.__get_string_id(self.__get_row_id(id_indexes, row), column_name)
+                    translations.append(TranslatableString(self.file, string_id, translatable_string))
 
         return translations
 
-    def write_translations_to_data(self):
+    def rewrite_data_file(self, fp_r, fp_w, translation_map: dict):
 
-        with open(self.get_translation_file_path(), "r", encoding="utf-8") as fp:
-            pass
+        # Remplacement dans le fichier data des chaînes de caractères traduites
+        reader = csv.reader(fp_r)
+        writer = csv.writer(fp_w)
 
+        # Passer le header
+        header = reader.__next__()
+        writer.writerow(header)
+
+        # Retrouver les indexes numériques des champs servant d'ID
+        id_indexes = [header.index(i) for i in self.key_columns if i in header]
+        # Retrouver les indexes numériques des champs traduisibles
+        translatable_indexes = self.__get_translatable_column_ids(header)
+
+        for row in reader:
+            for i in translatable_indexes:
+                column_name = header[i]
+                string_id = self.__get_string_id(self.__get_row_id(id_indexes, row), column_name)
+
+                # Remplacer l'ancienne chaîne par celle traduite
+                if string_id in translation_map:
+                    row[i] = translation_map[string_id]
+
+            writer.writerow(row)
 
 class JsonFile(Parsable):
 
@@ -182,16 +220,45 @@ def fetch_game_translations(src_file: Parsable):
 
         print(f"Écriture des chaînes à traduire dans {translation_file_path}")
 
+        writer = csv.writer(fp)
+
         # On écrit le header CSV du fichier
-        fp.write("id_do_not_translate_this,original_text,translation\n")
+        writer.writerow(["id_do_not_translate", "original_text", "translation"])
 
         # On écrit les données à traduire
-        for translatable_string in trans_data:
-            fp.write(translatable_string.to_csv_line())
+        for translatable_data in trans_data:
+            writer.writerow([translatable_data.id, translatable_data.original_string, ""])
 
 
-def update_data_with_new_translations(src_file: Parsable):
-    pass
+def write_translations_to_data_file(src_file: Parsable):
+
+    translation_map = {}
+
+    # Construire la map string_id -> translated string
+    with open(src_file.get_translation_file_path(), "r") as trans_fp:
+        reader = csv.reader(trans_fp)
+        # Passer le header
+        reader.__next__()
+
+        for translation in reader:
+
+            string_id = translation[0]
+            original_string = translation[1]
+            translated_string = translation[2]
+
+            if translated_string != "":
+                translation_map[string_id] = translated_string
+            else:
+                print("Il manque une traduction pour la chaîne {}:{}".format(src_file.get_path(), string_id))
+                translation_map[string_id] = original_string
+
+    # Réécrire du fichier présent dans data
+    original_file = src_file.get_data_file_path()
+    tmp_file = str(src_file.get_data_file_path())+".tmp"
+    with open(original_file) as inf, open(tmp_file, 'w') as outf:
+        src_file.rewrite_data_file(inf, outf, translation_map)
+    os.remove(original_file)
+    os.rename(tmp_file, original_file)
 
 
 def main():
@@ -218,12 +285,12 @@ def main():
                 continue
                 # src_file = TextFile()
             else:
-                raise ValueError("L'extension de fichier {} n'est pas supportée".format(file_type))
+                raise ValueError(f"L'extension de fichier {file_type} n'est pas supportée")
 
             if args.command == "fetch":
                 fetch_game_translations(src_file)
             elif args.command == 'write':
-                update_data_with_new_translations(src_file)
+                write_translations_to_data_file(src_file)
 
 
 if __name__ == "__main__":

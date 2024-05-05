@@ -289,11 +289,9 @@ Three meticulously calibrated lens assemblies guide photons within the ignition 
 
 The extreme range at which targets can be tracked and destroyed makes the HIL excel in safely providing close support to friendly ships that are engaged in a melee. It is a favored weapon of captains that can manage the flux cost associated with operating it.",,,,
 autopulse,WEAPON,"Numerous built-in capacitors are at the core of this extremely efficient, yet potent energy weapon. The high burst damage from expending built-up charges is offset by the comparatively low sustained firing rate.",,,,
-guardian,WEAPON,"A collection of smaller lasers mounted together on a rotating pod, with a built-in capacitor allowing extremely high burst damage vs fighters and missiles.
+guardian,WEAPON,"Although automated machines of war were forbidden in core Domain space, war drones were quietly employed outside of officially incorporated volume. Nothing like this, however, could possibly have been deployed by the Domain drone armadas.
 
-The Paladin is a military grade PD system that is usually only deployed on capital ships due to its high production and flux costs. Can detect and destroy incoming strike weapons and enemy fighters that have penetrated the capital ship's defensive escort screen. 
-
-A combination of an autonomous sub-gamma AI core for targeting and five separate carbon dioxide lasers make this weapon exceptionally effective in point defense. A dedicated rotator power supply makes target tracking almost instantaneous. The prohibitive energy requirement usually means that the weapon is only activated for seconds at a time, but that is usually enough to deal with any PD threat.",,,,
+There are elements of standard droneships within the hull structure, but they are covered by malevolently angled glacises and illogical tangles of conduit. Surely this monstrous vessel is the product of some deranged Domain naval architect, or a production chip corrupted by exposure to kilolights of faulty drive field?",,,,
 tpc,WEAPON,"A bulky energy weapon from an early epoch, the TPC is built directly into the Onslaught's hull and provides overwhelming frontal firepower.
 
 Designed before modular energy weapons were universally trusted by Domain procurement committees, this weapon was coded into the Onslaught's blueprint because no other hull of the time was large enough or had reactors capable of generating the requisite power.
@@ -479,8 +477,14 @@ dagger,SHIP,"Armed with a highly damaging torpedo, the Dagger is fragile but equ
 talon,SHIP,"Fast and cheap, the Talon sports surprising firepower and is capable of dispatching enemy fighters. It can also deal appreciable damage to larger ships when used en masse, though such use usually results in heavy pilot losses.",,,,
 hoplon,SHIP,"The Khopesh can deliver an accurate and devastating rocket barrage to its target. Safer and more reliable in dealing its damage than other bombers, it also doesn't boast quite the same damage potential.",,,,
 claw,SHIP,"Nimble and equipped with a low-grade shield generator, the Claw is primarily a support fighter. The EMP damage it deals is temporarily crippling to poorly-shielded targets, but it's incapable of dealing much permanent damage on its own.",,,,
-drone_borer,SHIP,"Slow and not very sturdy, this combat-modified mining drone is nonetheless capable of keeping hostiles off its mothership for a time. Fielded in numbers, it can even present a credible threat to smaller combat ships.",,,,
-drone_terminator,SHIP,"A point-defense drone built around the dreaded Terminator Core target analyzer, which finds transient weak points on missiles and fighters with unerring precision. Rumors about the core's AI intermittently exceeding the generally-allowed delta level during complex combat situations remain unproven.",,,,
+drone_borer,SHIP,Deploys several combat-modified mining drones. The drones are highly autonomous and capable of operating far from the mothership.,,,,
+drone_terminator,SHIP,"Deploys a single advanced drone that features a phase cloak, a modified phase skimmer, and an arsenal of weapons that would be impressive even on a heavy fighter.
+
+Even more impressive is the mini-fac that's capable of producing replacement drones in combat, ensuring that the host ship is not without escort for long.
+
+The drone also possesses an aggressive delta-level AI personality that allows it to roam much farther from the mothership than most other drone systems - that are either entirely on remote-control, or feature a sub-gamma personality at best.
+
+This design is also unique in that it was created through the cooperation of two rival corporations. Fabrique Orbitale provided the chassis and system designs, while Tri-Tachyon experts were responsible for the controlling AI.",,,,
 doom,SHIP,"Designed when phase technology was generally unknown and phase detectors were not a standard of every sensor package, this cruiser has lost the advantage of surprise - but retains a dangerous and flexible weapons loadout. 
 
 Certain unnerving psychological phenomena have been reported by sensitive crew members after enduring many rapid phase-shifts in combat conditions. Domain Navy reports on the subject were never declassified and are thought to have been lost since the Collapse.",,,,
@@ -844,7 +848,9 @@ planet_druj,CUSTOM,"A dead and barren world, albeit with an appreciable magnetic
 planet_aka_mainyu,CUSTOM,"Tidally locked to its primary, the hot gas giant Aka Mainyu's day side is an eternal hellish maelstrom with winds of vaporized metals reaching speeds of thousands of kilometers per hour. A half million tonnes of ionized gas is blasted from the atmosphere each second creating a complex whorled magnetotail with detectable effects across the entire inner volume of the Duzahk system. ",,,,
 toxic_cold,PLANET,"A frozen world enveloped by a thick nitrogen smog dappled with ethane and methane clouds. The surface is formed of eroded water-ice, windswept dunes of organic compounds, and hydrocarbon seas. Liquid water erupts bubbling with methane from cryovolcanoes driven by tidal heating and decaying radioactive elements deep within the mantle.",,,,
 slipstream,TERRAIN,"A flow in hyperspace, akin to currents navigated by ancient seafarers back on Old Earth.",,,,
-nebula,TERRAIN,"Interstellar clouds of hydrogen, helium, and dust that cause significant sensor noise that may aid a fleet hiding within. The (relatively) thick medium also interferes with drive field operation.",,,,
+nebula,TERRAIN,"The voluminous but ungainly hull of the Mbaye-Gogol 430 ""Nebula"" does little to enhance the romance of interstellar travel but it does ensure a respectable passenger and cargo capacity for a ship of its class. Indeed, the Nebula has slowly come to dominate mid-tier passenger service since the muted reception of its first line of production.
+
+The Nebula is equipped with a forward-facing shield to enhance the safety of passengers and extend the hull plating's maintenance schedule. And the Sector being what it is, several ballistic turrets and anti-missile all-band flare launchers have been mounted at fortuitous locations to assure paying passengers that their well-being is a top priority of the operator.",,,,
 event_horizon,TERRAIN,The gravitational flux near the event horizon of a black hole is extreme.,,,,
 pulsar_beam,TERRAIN,"A relativistic, magnetized jet combined with intense radiation. Commonly emitted by neutron stars.",,,,
 corona,TERRAIN,A halo of high temperature plasma which surrounds a star; most ships are not built to withstand prolonged exposure to the extreme radiation bombardment from the corona and will take damage if they remain within it.,,,,

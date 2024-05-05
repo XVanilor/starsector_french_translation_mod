@@ -1,9 +1,9 @@
-id_do_not_translate_this,original_text,translation
-combat.name,"Combat",
-combat.description,"Skills that improve the combat performance of your flagship.",
-leadership.name,"Leadership",
-leadership.description,"Skills that improve the combat performance of your fleet and officers.",
-technology.name,"Technology",
+id_do_not_translate,original_text,translation
+combat.name,Combat,
+combat.description,Skills that improve the combat performance of your flagship.,
+leadership.name,Leadership,
+leadership.description,Skills that improve the combat performance of your fleet and officers.,
+technology.name,Technology,
 technology.description,"A mix of skills that benefit exploration, stealth, and certain aspects your fleet and officers' combat performance.",
-industry.name,"Industry",
+industry.name,Industry,
 industry.description,"Skills that improve the efficiency and resilience of your fleet, and make it easier to recover from losses.",
